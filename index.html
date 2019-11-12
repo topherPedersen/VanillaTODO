@@ -1,46 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Hello!</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <!-- import the webpage's stylesheet -->
-    <link rel="stylesheet" href="/style.css">
-    
-    <!-- import the webpage's javascript file -->
-    <script src="/script.js" defer></script>
-  </head>  
-  <body>
-    <h1>Hi there!</h1>
-    
-    <p>
-      I'm your cool new webpage. Made with <a href="https://glitch.com">Glitch</a>!
-    </p>
+<html>
+<head>
+  <!-- Mobile Friendly Meta Tag -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>  
+<body>
 
-    
-    <ul id="todoList">
-      <li id="abc">foo <button onclick="removeFromList('abc');">-</button></li>
-      <li id="xyz">bar <button onclick="removeFromList('xyz')">-</button></li>
-      <li id="bla">baz <button onclick="removeFromList('bla')">-</button></li>
-    </ul>
-    
-    <script>
-    
-    
-      
-      function removeFromList(id) {        
-        var todoList = document.getElementById("todoList"); // parent
-        var itemToBeRemoved = document.getElementById(id); // child
-        todoList.removeChild(itemToBeRemoved);
-      }
-      
-    </script>
-    
-    <!-- include the Glitch button to show what the webpage is about and
-          to make it easier for folks to view source and remix -->
-    <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
-    <script src="https://button.glitch.me/button.js"></script>
-  </body>
+  <h1>Vanilla TODO</h1>
+
+  <input type="text" id="newItem">
+  <button onclick="addToList();">+</button>
+  
+  <ul id="todoList">
+    <li id="abc">make an addtolist function <button onclick="removeFromList('abc');">-</button></li>
+    <li id="xyz">make a generateUniqueId function <button onclick="removeFromList('xyz')">-</button></li>
+    <li id="bla">baz <button onclick="removeFromList('bla')">-</button></li>
+  </ul>
+
+<script>
+
+  // TODO: make an addToList Function
+  
+  // TODO: make a generateUniqueId Function (instructor will do this part)
+  /*
+      var myRandomNumber = Math.random();
+      myRandomNumber = myRandomNumber.toString();
+  */
+  
+  function addToList() {
+    // g
+    var task = document.getElementById("newItem").value;
+    alert(task);
+  }
+
+
+  function removeFromList(id) {        
+    var todoList = document.getElementById("todoList"); // parent
+    var itemToBeRemoved = document.getElementById(id); // child
+    todoList.removeChild(itemToBeRemoved);
+  }
+
+</script>
+
+</body>
 </html>
